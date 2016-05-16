@@ -405,7 +405,7 @@ public class EMPageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    private func loadAfterViewControllerForSelectedViewController(selectedViewController:UIViewController) {
+    public func loadAfterViewControllerForSelectedViewController(selectedViewController:UIViewController) {
         // Retreive the new after controller from the data source if available, otherwise set as nil
         if let afterViewController = self.dataSource?.em_pageViewController(self, viewControllerAfterViewController: selectedViewController) {
             self.afterViewController = afterViewController
@@ -429,7 +429,7 @@ public class EMPageViewController: UIViewController, UIScrollViewDelegate {
         viewController?.removeFromParentViewController()
     }
     
-    private func layoutViews() {
+    public func layoutViews() {
         
         let viewWidth = self.view.bounds.width
         let viewHeight = self.view.bounds.height
